@@ -55,12 +55,6 @@ footer{
 	display: table;
 }
 
-
-
-/* div#grid .square > span {
-	background-color: darkblue;
-} */
-
 div#grid .square.clicked,
 div#grid .square.clicked span  {
     background-color: blue;
