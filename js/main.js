@@ -49,6 +49,7 @@ function createNewGame(){
     cell.addEventListener('click', function(){
         if (!bombs.includes(i)){
             this.classList.add('clicked');
+            points++;
             writeInElementById('points', `Il tuo punteggio è: ${points}`);
             //?!punto
         } else {
