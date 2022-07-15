@@ -35,11 +35,12 @@ function createNewGame(){
     }
     //radice quadrata di cellsNumber
     cellsPerRow = Math.sqrt(cellsNumber);
+
+     //!array bombe random
+     const bombs = generateBombList(16, cellsNumber);
+     console.log(bombs);
     
     for ( let i = 1; i <= cellsNumber; i++){
-        //!array bombe random
-        const bombs = generateBombList(16, cellsNumber);
-        console.log(bombs);
         const cell = createSquare(i, cellsPerRow);
         cell.addEventListener('click', function(){
             this.classList.add('clicked');
