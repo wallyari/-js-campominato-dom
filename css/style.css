@@ -1,0 +1,68 @@
+body{
+	font-family: "Montserrat", sans-serif;
+	background-color: rgba(246, 243, 243, 0.942);
+
+}
+
+main{
+	padding: 2rem;
+	margin-top: 3rem;
+	height: calc(95vh - 10rem);
+}
+
+div#grid{
+	margin: 0 auto;
+	width: 500px;
+	height:500px;
+}
+
+div#grid .square{
+	border: 1px black solid;
+	float: left;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+header{
+	background-color: white;
+	height: 5rem;	
+}
+
+header div.header-wrapper{
+	height: 5rem;
+	line-height: 5rem;
+	vertical-align: middle;
+
+}
+
+header div.header-start,
+header div.header-start img{
+    height: 100%;
+    line-height: 5rem;
+}
+
+footer{
+	background-color: white ;
+	height: 5rem;
+}
+
+.clearfix::after{
+	content: '';
+	clear: both;
+	display: table;
+}
+
+
+
+/* div#grid .square > span {
+	background-color: darkblue;
+} */
+
+div#grid .square.clicked,
+div#grid .square.clicked span  {
+    background-color: blue;
+    color: white;
+}
