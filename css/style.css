@@ -60,3 +60,11 @@ div#grid .square.clicked span  {
     background-color: blue;
     color: white;
 }
+
+
+
+div#grid .square.clicked-bomb,
+div#grid .square.clicked-bomb span  {
+    background-color: red;
+    color: white;
+}

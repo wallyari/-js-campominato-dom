@@ -42,6 +42,21 @@ function createNewGame(){
     
     for ( let i = 1; i <= cellsNumber; i++){
         const cell = createSquare(i, cellsPerRow);
+        
+    //!condizioni per addEvL BOMBE
+    cell.addEventListener('click', function(){
+        if (!bombs.includes(i)){
+            this.classList.add('clicked');
+        } else {
+            this.classList.add('clicked-bomb');
+        }  
+        });
+
+        
+
+
+
+
         cell.addEventListener('click', function(){
             this.classList.add('clicked');
         });
