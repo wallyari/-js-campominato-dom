@@ -18,6 +18,8 @@ function createNewGame(){
     //stabilire caselle in base al valore delle difficoltà
     let cellsPerRow;
     let cellsNumber;
+    //!var per punteggio
+    let points = 0;
     
     
     
@@ -37,8 +39,8 @@ function createNewGame(){
     cellsPerRow = Math.sqrt(cellsNumber);
 
      //!array bombe random
-     const bombs = generateBombList(16, cellsNumber);
-     console.log(bombs);
+    const bombs = generateBombList(16, cellsNumber);
+    console.log(bombs);
     
     for ( let i = 1; i <= cellsNumber; i++){
         const cell = createSquare(i, cellsPerRow);
@@ -47,8 +49,11 @@ function createNewGame(){
     cell.addEventListener('click', function(){
         if (!bombs.includes(i)){
             this.classList.add('clicked');
+            writeInElementById('points', `Il tuo punteggio è: ${points}`);
+            //?!punto
         } else {
             this.classList.add('clicked-bomb');
+            writeInElementById('points', `BOMBA!: ${points}`);
         }  
         });
 
@@ -128,4 +133,7 @@ function generateUniqueRandomNumber( numsBlacklist, min, max){
     }
     return randomInt;
 }
-
+//!funz per sovrascrivere punteggio (da id)
+function writeInElementById(elementId, stringToWrite){
+    document.getElementById(elementId).innerHTML = stringToWrite;
+} 
